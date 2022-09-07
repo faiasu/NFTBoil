@@ -1,21 +1,21 @@
 {
-  "CONTRACT_ADDRESS": "0x807cdaf7EfDFB9834CEc8b09EE6F464e3FBd8Dd0",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x807cdaf7EfDFB9834CEc8b09EE6F464e3FBd8Dd0",
+  "CONTRACT_ADDRESS": "0x827ce369f321e98b8cf620773E3201a793733F19",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x827ce369f321e98b8cf620773E3201a793733F19",
   "NETWORK": {
     "NAME": "Rinkeby",
     "SYMBOL": "ETH",
     "ID": 4,
     "DECIMALS": 18,
-    "RPC_URL": "https://eth-rinkeby.alchemyapi.io/v2/WG68WJV_dEDvQY7Lnyt5ZxwK6FBCEHLJ",
+    "RPC_URL": "https://rinkeby.infura.io/v3/4be12687e20749c59c85b5f555921946",
     "BLOCK_EXPLORER_URL": "https://rinkeby.etherscan.io/"
   },
-  "NFT_NAME": "NFTBoilMerkle",
-  "SYMBOL": "BOIL",
-  "MAX_SUPPLY": 7000,
+  "NFT_NAME": "KaiShibaNFTTest",
+  "SYMBOL": "SHIBA",
+  "MAX_SUPPLY": 100,
   "GAS_LIMIT": 200000,
   "PAUSED": false,
   "MARKETPLACE": "OpenSea",
   "MARKETPLACE_LINK": "https://opensea.io/",
-  "MAX_MINT_AMOUNT_PRE": 5,
-  "MAX_MINT_AMOUNT_PUBLIC": 10
+  "MAX_MINT_AMOUNT_PRE": 3,
+  "MAX_MINT_AMOUNT_PUBLIC": 5
 }

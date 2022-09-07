@@ -43,6 +43,7 @@ export const handler: Handler = async (event, context) => {
   }
 }
 const addresses = [
-  '0x813c6726e40cbcdff33d27324b9ae77a4e4d43fd',
-  '0xb13dAc27BEbF08778ac5aEC9387E56413773B875',
+  '0x27eD0dB22AC700548c3A654cA59c05d2c9A72583',
+  '0xBACD554F82690B080D9ED06f6774321bD7f38E84',
+  '0x28597d8C16F8E0568d818720C9f09d554dc45D18',
 ]

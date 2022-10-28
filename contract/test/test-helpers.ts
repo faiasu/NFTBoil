@@ -14,6 +14,16 @@ export const testConfig = {
   symbol: 'BOIL',
 }
 
+export const testConfigRegene = {
+  price: 0.002,
+  contract_name: 'regeneMerkleA',
+  max_supply: 1000,
+  initialSupply: 198,
+  max_mint: 10,
+  presale_max_mint: 5,
+  symbol: 'BOIL',
+}
+
 export async function assertPreMint(
   ad: any,
   cost: BigNumber,

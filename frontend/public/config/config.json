@@ -2,16 +2,16 @@
   "CONTRACT_ADDRESS": "0x827ce369f321e98b8cf620773E3201a793733F19",
   "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x827ce369f321e98b8cf620773E3201a793733F19",
   "NETWORK": {
-    "NAME": "Rinkeby",
+    "NAME": "Goerli",
     "SYMBOL": "ETH",
-    "ID": 4,
+    "ID": 5,
     "DECIMALS": 18,
-    "RPC_URL": "https://rinkeby.infura.io/v3/4be12687e20749c59c85b5f555921946",
-    "BLOCK_EXPLORER_URL": "https://rinkeby.etherscan.io/"
+    "RPC_URL": "https://goerli.infura.io/v3/4be12687e20749c59c85b5f555921946",
+    "BLOCK_EXPLORER_URL": "https://goerli.etherscan.io/"
   },
-  "NFT_NAME": "KaiShibaNFTTest",
-  "SYMBOL": "SHIBA",
-  "MAX_SUPPLY": 100,
+  "NFT_NAME": "RegeneMerkleA",
+  "SYMBOL": "regene",
+  "MAX_SUPPLY": 1000,
   "GAS_LIMIT": 200000,
   "PAUSED": false,
   "MARKETPLACE": "OpenSea",

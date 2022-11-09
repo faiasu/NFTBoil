@@ -91,6 +91,8 @@ const Mint = () => {
     GAS_LIMIT: 0,
     MARKETPLACE: '',
     MARKETPLACE_LINK: '',
+    MAX_MINT_AMOUNT_PUBLIC: 7,
+    MAX_MINT_AMOUNT_PRE: 3,
   })
 
   const { indicatorEl } = useLoading({
@@ -359,9 +361,25 @@ const Mint = () => {
             color: 'var(--secondary)',
           }}
         >
-          Mintlist sale: TBA <br />
-          Public sale: TBA JST
+          Pre sale:
         </s.TextTitle>
+        <s.TextDescription
+        >
+        11/25(Fri)20:00 ～ 26(Sat)20:00 JST<br />
+          Max {CONFIG.MAX_MINT_AMOUNT_PRE} NFTs per Transaction
+        </s.TextDescription>
+        <s.TextTitle
+          style={{
+            textAlign: 'center',
+            color: 'var(--secondary)',
+          }}
+        >
+          Public sale:
+        </s.TextTitle>
+        <s.TextDescription>
+        11/26(Sat)21:00 ～ 28(Mon) 21:00 JST<br />
+          Max {CONFIG.MAX_MINT_AMOUNT_PUBLIC} NFTs per Transaction
+        </s.TextDescription>
         <s.SpacerSmall />
         <s.TextTitle
           style={{
@@ -403,25 +421,11 @@ const Mint = () => {
           {CONFIG.MARKETPLACE}
         </StyledLink>
       </s.Container>
-      <s.SpacerLarge />
       <s.Container>
         <s.TextDescription
           style={{
             textAlign: 'left',
-            color: 'var(--accent)',
-          }}
-        >
-          Pre/Public Price: 0.01ETH
-          <br />
-          WhiteList Max: 10 NFTs per address
-          <br />
-          Public Max: 10 NFTs per Transaction
-        </s.TextDescription>
-        <s.SpacerMedium />
-        <s.TextDescription
-          style={{
-            textAlign: 'left',
-            color: 'var(--accent)',
+            color: 'var(--black)',
           }}
         >
           Please make sure you are connected to the right network (

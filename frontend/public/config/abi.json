@@ -18,6 +18,13 @@
   { "inputs": [], "name": "MintERC2309QuantityExceedsLimit", "type": "error" },
   { "inputs": [], "name": "MintToZeroAddress", "type": "error" },
   { "inputs": [], "name": "MintZeroQuantity", "type": "error" },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "operator", "type": "address" }
+    ],
+    "name": "OperatorNotAllowed",
+    "type": "error"
+  },
   { "inputs": [], "name": "OwnerQueryForNonexistentToken", "type": "error" },
   {
     "inputs": [],
@@ -196,6 +203,19 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "OPERATOR_FILTER_REGISTRY",
+    "outputs": [
+      {
+        "internalType": "contract IOperatorFilterRegistry",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       { "internalType": "address", "name": "to", "type": "address" },
       { "internalType": "uint256", "name": "tokenId", "type": "uint256" }
@@ -226,6 +246,13 @@
   {
     "inputs": [],
     "name": "getCurrentCost",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getMintedCount",
     "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
@@ -402,7 +429,7 @@
       { "internalType": "address", "name": "from", "type": "address" },
       { "internalType": "address", "name": "to", "type": "address" },
       { "internalType": "uint256", "name": "tokenId", "type": "uint256" },
-      { "internalType": "bytes", "name": "_data", "type": "bytes" }
+      { "internalType": "bytes", "name": "data", "type": "bytes" }
     ],
     "name": "safeTransferFrom",
     "outputs": [],

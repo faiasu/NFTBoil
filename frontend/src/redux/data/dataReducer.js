@@ -22,6 +22,8 @@ const dataReducer = (state = initialState, action) => {
         cost: action.payload.cost,
         displayCost: action.payload.display_cost,
         presale: action.payload.presale,
+        mintable: action.payload.mintable,
+        mintedCount: action.payload.mintedCount,
         error: false,
         errorMsg: '',
       }

@@ -77,6 +77,7 @@ const Mint = () => {
   const [claimingNft, setClaimingNft] = useState(false)
   const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`)
   const [mintAmount, setMintAmount] = useState(1)
+  const [countPremint, setCountPremint] = useState(-1)
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: '',
     SCAN_LINK: '',
@@ -147,16 +148,30 @@ const Mint = () => {
   }
 
   const incrementMintAmount = () => {
-    const MAX_MINT_AMOUNT = data.presale
-      ? CONFIG.MAX_MINT_AMOUNT_PRE
-      : CONFIG.MAX_MINT_AMOUNT_PUBLIC
+    const maxMintAmount = getMaxMintAmountNextTx();
+
     let newMintAmount = mintAmount + 1
-    if (newMintAmount > MAX_MINT_AMOUNT) {
-      newMintAmount = MAX_MINT_AMOUNT
+    if (newMintAmount > maxMintAmount) {
+      newMintAmount = maxMintAmount
     }
     setMintAmount(newMintAmount)
+
   }
 
+  const incrementMintAmountMax = () => {
+    const maxMintAmount = getMaxMintAmountNextTx()
+    setMintAmount(maxMintAmount)
+  }  
+  const getMaxMintAmountNextTx = () => {
+    let maxMintAmountNextTx = 0
+    if (data.presale) {
+      maxMintAmountNextTx = CONFIG.MAX_MINT_AMOUNT_PRE - data.mintedCount
+    } else {
+      maxMintAmountNextTx = CONFIG.MAX_MINT_AMOUNT_PUBLIC
+    }
+    return maxMintAmountNextTx
+
+  }
   const getData = () => {
     if (blockchain.account !== '' && blockchain.smartContract !== null) {
       dispatch(fetchData(blockchain.account))
@@ -252,6 +267,35 @@ const Mint = () => {
         </s.TextDescription>
       )
     }
+    if (!data.mintable) {
+      return (
+        <StyledButton
+          disabled="1"
+        >
+          <BuyButtonContent>PAUSED</BuyButtonContent>
+        </StyledButton>
+      )
+    }
+    if(data.presale && CONFIG.MAX_MINT_AMOUNT_PRE == data.mintedCount) {
+      return (
+        <s.Container ai={'center'} jc={'center'}>
+          <s.TextDescription
+            style={{
+              textAlign: 'center',
+              color: 'var(--accent-text)',
+            }}
+          >
+          Already claimed max!
+          </s.TextDescription>
+        <StyledButton
+          disabled="1"
+        >
+          <BuyButtonContent>BUY</BuyButtonContent>
+        </StyledButton>
+        </s.Container>
+      )
+    }
+
     return (
       <StyledButton
         disabled={claimingNft ? 1 : 0}
@@ -320,6 +364,20 @@ const Mint = () => {
           >
             +
           </StyledRoundButton>
+
+          <span style={{ width: '10px' }}></span>
+          <StyledRoundButton
+            disabled={claimingNft ? 1 : 0}
+            onClick={(e) => {
+              e.preventDefault()
+              incrementMintAmountMax()
+            }}
+            style={{
+              width: '50px',
+            }}
+          >
+            MAX
+          </StyledRoundButton>
         </s.Container>
         <s.SpacerSmall />
         <s.Container ai={'center'} jc={'center'} fd={'row'}>
@@ -366,7 +424,7 @@ const Mint = () => {
         <s.TextDescription
         >
         11/25(Fri)20:00 ～ 26(Sat)20:00 JST<br />
-          Max {CONFIG.MAX_MINT_AMOUNT_PRE} NFTs per Transaction
+          Max {CONFIG.MAX_MINT_AMOUNT_PRE} NFTs per Wallet
         </s.TextDescription>
         <s.TextTitle
           style={{

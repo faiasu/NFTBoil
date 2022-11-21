@@ -42,12 +42,26 @@ export const fetchData = () => {
         .blockchain.smartContract.methods.presale()
         .call()
 
+      const mintable = await store
+        .getState()
+        .blockchain.smartContract.methods.mintable()
+        .call()
+
+      const nowAccount = store.getState().blockchain.account
+      console.log('nowAccount', nowAccount)
+      const mintedCount = await store
+        .getState()
+        .blockchain.smartContract.methods.getMintedCount()
+        .call({ from: nowAccount })
+
       dispatch(
         fetchDataSuccess({
           totalSupply,
           cost,
           display_cost,
           presale,
+          mintable,
+          mintedCount,
         })
       )
     } catch (err) {

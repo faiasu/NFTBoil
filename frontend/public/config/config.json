@@ -1,6 +1,6 @@
 {
-  "CONTRACT_ADDRESS": "0x94e50c01770f8C1696891e9e00A13F558d9c18a5",
-  "SCAN_LINK": "https://goerli.etherscan.io/address/0x94e50c01770f8C1696891e9e00A13F558d9c18a5",
+  "CONTRACT_ADDRESS": "0x43521e3df1c73c92819939A13e0d707B5E24F785",
+  "SCAN_LINK": "https://goerli.etherscan.io/address/0x43521e3df1c73c92819939A13e0d707B5E24F785",
   "NETWORK": {
     "NAME": "Goerli",
     "SYMBOL": "ETH",
@@ -16,6 +16,6 @@
   "PAUSED": false,
   "MARKETPLACE": "OpenSea",
   "MARKETPLACE_LINK": "https://opensea.io/",
-  "MAX_MINT_AMOUNT_PRE": 3,
-  "MAX_MINT_AMOUNT_PUBLIC": 7
+  "MAX_MINT_AMOUNT_PRE": 4,
+  "MAX_MINT_AMOUNT_PUBLIC": 6
 }

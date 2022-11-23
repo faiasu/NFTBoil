@@ -92,8 +92,8 @@ const Mint = () => {
     GAS_LIMIT: 0,
     MARKETPLACE: '',
     MARKETPLACE_LINK: '',
-    MAX_MINT_AMOUNT_PUBLIC: 7,
-    MAX_MINT_AMOUNT_PRE: 3,
+    MAX_MINT_AMOUNT_PUBLIC: 6,
+    MAX_MINT_AMOUNT_PRE: 4,
   })
 
   const { indicatorEl } = useLoading({

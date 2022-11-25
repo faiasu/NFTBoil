@@ -1,13 +1,13 @@
 {
-  "CONTRACT_ADDRESS": "0x43521e3df1c73c92819939A13e0d707B5E24F785",
-  "SCAN_LINK": "https://goerli.etherscan.io/address/0x43521e3df1c73c92819939A13e0d707B5E24F785",
+  "CONTRACT_ADDRESS": "0xC00A8DCFf579e80524982c72001A6cefCab928Ac",
+  "SCAN_LINK": "https://etherscan.io/address/0xC00A8DCFf579e80524982c72001A6cefCab928Ac",
   "NETWORK": {
-    "NAME": "Goerli",
-    "SYMBOL": "ETH",
-    "ID": 5,
+    "NAME": "Ethereum",
+    "SYMBOL": "eth",
+    "ID": 1,
     "DECIMALS": 18,
-    "RPC_URL": "https://eth-goerli.g.alchemy.com/v2/d-Eru-giMFj-WaVW1cFNns5xg7I-JouQ",
-    "BLOCK_EXPLORER_URL": "https://goerli.etherscan.io/"
+    "RPC_URL": "https://eth-mainnet.g.alchemy.com/v2/VWbElmpjLY9AnNPpRU5avjAmtfm9tz3D",
+    "BLOCK_EXPLORER_URL": "https://etherscan.io/"
   },
   "NFT_NAME": "TokyoCatPunks",
   "SYMBOL": "CAT",
